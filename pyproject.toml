@@ -1,0 +1,29 @@
+[project]
+name = "ai-sales-tools"
+version = "0.1.0"
+description = "AI-powered sales tools: cold outreach, lead scoring, call summaries, and proposals, built on the Anthropic API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "anthropic>=0.36.0",
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+sales-tools = "ai_sales_tools.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_sales_tools"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
