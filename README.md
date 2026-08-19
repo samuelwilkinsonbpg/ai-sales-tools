@@ -22,17 +22,19 @@ invent facts, pricing, or outcomes that weren't provided.
 ## Live demo (no local setup)
 
 `app.py` is a [Streamlit](https://streamlit.io) UI over the same four tools — one form each,
-no CLI or install required for whoever's trying it. Deploy your own copy for free in about
-3 minutes:
+no CLI or install required for whoever's trying it. **No API key needed to deploy it**: with no
+`ANTHROPIC_API_KEY` set, each tool shows a canned sample result instead of calling the API, so
+you can stand up a working demo at zero cost. Deploy your own copy for free in about 3 minutes:
 
 1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
 2. Click **New app**, pick this repo, branch `main`, main file path `app.py`.
-3. Before (or after) deploying, open **Advanced settings → Secrets** and add:
-   ```toml
-   ANTHROPIC_API_KEY = "sk-ant-..."
-   ```
-4. Click **Deploy**. You'll get a public `*.streamlit.app` URL — share that link to demo the
-   tools with zero setup on the visitor's end.
+3. Click **Deploy**. You'll get a public `*.streamlit.app` URL running in free demo mode.
+
+To switch to live generation later, open the app's **Settings → Secrets** and add:
+```toml
+ANTHROPIC_API_KEY = "sk-ant-..."
+```
+The app reboots automatically and the sample outputs are replaced with real, live-generated ones.
 
 To run it locally instead: `pip install -e ".[web]"`, then
 `ANTHROPIC_API_KEY=sk-ant-... streamlit run app.py`.
