@@ -46,10 +46,10 @@ st.caption(
 
 if DEMO_MODE:
     st.info(
-        "Running in **free demo mode** — no ANTHROPIC_API_KEY is configured, so the buttons "
-        "below show a canned sample result instead of calling the API (no cost, no key needed). "
-        "The app owner can add a key under Settings → Secrets to switch to live generation.",
-        icon="🧪",
+        "**Example mode** — each tool below shows a sample result for the given inputs so you "
+        "can see the full experience without an API call. Live AI generation from your own "
+        "inputs can be switched on separately.",
+        icon="📌",
     )
 
 
