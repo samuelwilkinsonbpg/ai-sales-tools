@@ -1,0 +1,4 @@
+# Used by Streamlit Community Cloud to build this app.
+# Installs this package (editable) plus the web UI's own dependency.
+-e .
+streamlit>=1.35

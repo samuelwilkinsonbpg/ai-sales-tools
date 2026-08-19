@@ -19,6 +19,24 @@ Python library or as a `sales-tools` CLI.
 Every tool is grounded in the input you give it — prompts explicitly instruct the model not to
 invent facts, pricing, or outcomes that weren't provided.
 
+## Live demo (no local setup)
+
+`app.py` is a [Streamlit](https://streamlit.io) UI over the same four tools — one form each,
+no CLI or install required for whoever's trying it. Deploy your own copy for free in about
+3 minutes:
+
+1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
+2. Click **New app**, pick this repo, branch `main`, main file path `app.py`.
+3. Before (or after) deploying, open **Advanced settings → Secrets** and add:
+   ```toml
+   ANTHROPIC_API_KEY = "sk-ant-..."
+   ```
+4. Click **Deploy**. You'll get a public `*.streamlit.app` URL — share that link to demo the
+   tools with zero setup on the visitor's end.
+
+To run it locally instead: `pip install -e ".[web]"`, then
+`ANTHROPIC_API_KEY=sk-ant-... streamlit run app.py`.
+
 ## Setup
 
 ```bash

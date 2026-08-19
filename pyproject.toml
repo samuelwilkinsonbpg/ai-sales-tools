@@ -13,6 +13,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0.0"]
+web = ["streamlit>=1.35"]
 
 [project.scripts]
 sales-tools = "ai_sales_tools.cli:main"
